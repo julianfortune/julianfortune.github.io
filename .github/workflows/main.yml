@@ -1,0 +1,21 @@
+# Runs Hugo build
+
+name: Hugo
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@master
+
+      - name: Build Hugo
+        uses: lowply/build-hugo@v0.74.1
