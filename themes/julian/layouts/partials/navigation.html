@@ -1,0 +1,26 @@
+<nav class="" id="navigation">
+    <h1>
+        <a href="/">
+            JULIAN FORTUNE
+        </a>
+    </h1>
+    <ul>
+        {{ $currentPage := . }}
+        {{ range .Site.Menus.main }}
+        {{ $currentPageIsActive := or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .)}}
+        <li class="{{if $currentPageIsActive}} active {{end}}">
+            <a href="{{ .URL }}" title="{{ .Title }}">
+                {{ .Name }}
+            </a>
+            <div class="underline"></div>
+        </li>
+        {{end}}
+    </ul>
+    <button class="open-menu-button" title="Open Navigation Menu" onclick="toggleMenu()">
+        <div class="menu-icon">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </button>
+</nav>

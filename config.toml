@@ -1,0 +1,14 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Julian Fortune"
+theme = "julian"
+sectionPagesMenu = "main"
+
+pygmentsUseClasses = true
+
+[params]
+  # Home page parameters
+  name = "Julian Fortune"
+  tagline = "Computer Science Major at Oregon State University"
+  linkedIn = ""
+  twitter = ""
