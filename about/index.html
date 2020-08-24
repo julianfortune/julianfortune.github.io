@@ -5,7 +5,31 @@
 
 <title>About - Julian Fortune</title>
 
-<meta name="description" content="Education Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Accumsan tortor posuere ac ut. Maecenas ultricies mi eget mauris pharetra et ultrices. Sagittis vitae et leo duis ut diam. Libero volutpat sed cras ornare arcu dui vivamus arcu felis. Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Magna sit amet purus gravida quis blandit turpis cursus in. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis.">
+<meta name="description" content="Education
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Accumsan tortor posuere ac ut. Maecenas ultricies mi eget mauris pharetra et ultrices. Sagittis vitae et leo duis ut diam. Libero volutpat sed cras ornare arcu dui vivamus arcu felis. Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Magna sit amet purus gravida quis blandit turpis cursus in. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis. Risus feugiat in ante metus dictum. Sagittis vitae et leo duis. Ut consequat semper viverra nam libero. Elementum facilisis leo vel fringilla est ullamcorper. Habitant morbi tristique senectus et netus et malesuada fames. Condimentum vitae sapien pellentesque habitant morbi tristique senectus et. Ipsum nunc aliquet bibendum enim facilisis gravida neque. Maecenas accumsan lacus vel facilisis.
+def quickSort(a):
+    # Base case
+    if len(a) &lt;= 1:
+        return a
+
+    else:
+        less = []
+        more = []
+
+        pivot = choice(a)
+
+        name = &#34;Julian&#34;
+
+        for i in a:
+            if i &lt; pivot:
+                less.append(i)
+            if i &gt; pivot:
+                more.append(i)
+
+        less = quickSort(less)
+        more = quickSort(more)
+        return less &#43; [pivot] * a.count(pivot) &#43; more
+This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.">
 <meta name="author" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -52,16 +76,8 @@
         
         
         <li class="">
-            <a href="/blog/" title="Blog">
+            <a href="/posts/" title="Blog">
                 Blog
-            </a>
-            <div class="underline"></div>
-        </li>
-        
-        
-        <li class="">
-            <a href="/downloads/" title="Downloads">
-                Downloads
             </a>
             <div class="underline"></div>
         </li>
@@ -85,9 +101,9 @@
     </ul>
     <button class="open-menu-button" title="Open Navigation Menu" onclick="toggleMenu()">
         <div class="menu-icon">
-            <div></div>
-            <div></div>
-            <div></div>
+            <div class="icon"></div>
+            <div class="icon"></div>
+            <div class="icon"></div>
         </div>
     </button>
 </nav></header>
@@ -118,12 +134,133 @@
         <span class="n">less</span> <span class="o">=</span> <span class="n">quickSort</span><span class="p">(</span><span class="n">less</span><span class="p">)</span>
         <span class="n">more</span> <span class="o">=</span> <span class="n">quickSort</span><span class="p">(</span><span class="n">more</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">less</span> <span class="o">+</span> <span class="p">[</span><span class="n">pivot</span><span class="p">]</span> <span class="o">*</span> <span class="n">a</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">pivot</span><span class="p">)</span> <span class="o">+</span> <span class="n">more</span>
-</code></pre></div><h3 id="education-1">Education</h3>
-<p>Sed vulputate odio ut enim. Nunc faucibus a pellentesque sit amet porttitor. Vitae justo eget magna fermentum iaculis eu non diam phasellus. Feugiat pretium nibh ipsum consequat nisl vel pretium lectus quam. Ipsum suspendisse ultrices gravida dictum fusce ut placerat orci nulla. Nibh mauris cursus mattis molestie a. Egestas diam in arcu cursus euismod quis viverra nibh. Lacus vestibulum sed arcu non odio euismod. Ultrices mi tempus imperdiet nulla malesuada pellentesque elit eget gravida. Sed id semper risus in hendrerit gravida rutrum. Lectus arcu bibendum at varius. Quis eleifend quam adipiscing vitae proin sagittis. Volutpat est velit egestas dui id ornare arcu odio. Feugiat nisl pretium fusce id velit ut tortor pretium. Dignissim cras tincidunt lobortis feugiat vivamus at augue eget. Mattis aliquam faucibus purus in massa tempor. Tellus integer feugiat scelerisque varius morbi enim. Quisque egestas diam in arcu cursus. Pharetra massa massa ultricies mi quis hendrerit.</p>
-<p>In nibh mauris cursus mattis molestie. Diam vulputate ut pharetra sit amet. Quis hendrerit dolor magna eget est lorem ipsum dolor sit. Purus viverra accumsan in nisl nisi scelerisque. Sodales neque sodales ut etiam. Iaculis eu non diam phasellus vestibulum lorem. Non curabitur gravida arcu ac. Dolor morbi non arcu risus. Turpis egestas integer eget aliquet nibh praesent tristique. Amet purus gravida quis blandit turpis cursus. Nec ullamcorper sit amet risus nullam eget felis eget nunc. Condimentum mattis pellentesque id nibh tortor id aliquet. Dolor sit amet consectetur adipiscing elit duis tristique sollicitudin nibh. Accumsan sit amet nulla facilisi morbi tempus iaculis. Dui vivamus arcu felis bibendum ut tristique. Facilisis magna etiam tempor orci. Purus semper eget duis at tellus at urna condimentum mattis. Amet nisl purus in mollis nunc sed id semper risus.</p>
-<p>Sollicitudin tempor id eu nisl nunc mi ipsum faucibus. A pellentesque sit amet porttitor eget dolor morbi non. Sem integer vitae justo eget magna fermentum iaculis eu. Vel pharetra vel turpis nunc eget lorem dolor sed. Egestas congue quisque egestas diam in arcu cursus euismod. Hendrerit dolor magna eget est lorem ipsum dolor sit. Elementum facilisis leo vel fringilla est ullamcorper eget. Est ullamcorper eget nulla facilisi etiam dignissim diam quis. Risus quis varius quam quisque id diam vel quam. Pellentesque nec nam aliquam sem et. Arcu risus quis varius quam quisque. Sed adipiscing diam donec adipiscing tristique risus nec. Lacus sed turpis tincidunt id aliquet risus feugiat in ante. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Ipsum dolor sit amet consectetur. Netus et malesuada fames ac. Platea dictumst vestibulum rhoncus est. Gravida dictum fusce ut placerat orci nulla.</p>
-<p>Lacus sed viverra tellus in. Eleifend donec pretium vulputate sapien nec sagittis. Pharetra pharetra massa massa ultricies mi quis hendrerit dolor magna. Eget magna fermentum iaculis eu non. Mi proin sed libero enim. Ultrices mi tempus imperdiet nulla malesuada pellentesque elit. Scelerisque varius morbi enim nunc faucibus a pellentesque. Purus gravida quis blandit turpis. Odio morbi quis commodo odio aenean. Gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim. Bibendum ut tristique et egestas quis ipsum. Commodo sed egestas egestas fringilla phasellus faucibus scelerisque eleifend. Interdum velit euismod in pellentesque massa placerat duis. Quis risus sed vulputate odio ut enim blandit. Pulvinar mattis nunc sed blandit libero. Quis hendrerit dolor magna eget.</p>
-
+</code></pre></div><p>This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.</p>
+<h2 id="headings">Headings</h2>
+<p>The following HTML <code>&lt;h1&gt;</code>—<code>&lt;h6&gt;</code> elements represent six levels of section headings. <code>&lt;h1&gt;</code> is the highest section level while <code>&lt;h6&gt;</code> is the lowest.</p>
+<h1 id="h1">H1</h1>
+<h2 id="h2">H2</h2>
+<h3 id="h3">H3</h3>
+<h4 id="h4">H4</h4>
+<h5 id="h5">H5</h5>
+<h6 id="h6">H6</h6>
+<h2 id="paragraph">Paragraph</h2>
+<p>Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga. Ri oditatquam, ad quibus unda veliamenimin cusam et facea ipsamus es exerum sitate dolores editium rerore eost, temped molorro ratiae volorro te reribus dolorer sperchicium faceata tiustia prat.</p>
+<p>Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sapicia is sinveli squiatum, core et que aut hariosam ex eat.</p>
+<h2 id="blockquotes">Blockquotes</h2>
+<p>The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a <code>footer</code> or <code>cite</code> element, and optionally with in-line changes such as annotations and abbreviations.</p>
+<h4 id="blockquote-without-attribution">Blockquote without attribution</h4>
+<blockquote>
+<p>Tiam, ad mint andaepu dandae nostion secatur sequo quae.
+<strong>Note</strong> that you can use <em>Markdown syntax</em> within a blockquote.</p>
+</blockquote>
+<h4 id="blockquote-with-attribution">Blockquote with attribution</h4>
+<blockquote>
+<p>Don&rsquo;t communicate by sharing memory, share memory by communicating.<!-- raw HTML omitted -->
+— <!-- raw HTML omitted -->Rob Pike<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup><!-- raw HTML omitted --></p>
+</blockquote>
+<h2 id="tables">Tables</h2>
+<p>Tables aren&rsquo;t part of the core Markdown spec, but Hugo supports supports them out-of-the-box.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Age</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bob</td>
+<td>27</td>
+</tr>
+<tr>
+<td>Alice</td>
+<td>23</td>
+</tr>
+</tbody>
+</table>
+<h4 id="inline-markdown-within-tables">Inline Markdown within tables</h4>
+<table>
+<thead>
+<tr>
+<th>Inline   </th>
+<th>Markdown   </th>
+<th>In   </th>
+<th>Table</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>italics</em></td>
+<td><strong>bold</strong></td>
+<td><del>strikethrough</del>   </td>
+<td><code>code</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="code-blocks">Code Blocks</h2>
+<h4 id="code-block-with-backticks">Code block with backticks</h4>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Example HTML5 Document<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Test<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div><h4 id="code-block-indented-with-four-spaces">Code block indented with four spaces</h4>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;Example HTML5 Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;p&gt;Test&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h4 id="code-block-with-hugos-internal-highlight-shortcode">Code block with Hugo&rsquo;s internal highlight shortcode</h4>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Example HTML5 Document<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Test<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></code></pre></div>
+<h2 id="list-types">List Types</h2>
+<h4 id="ordered-list">Ordered List</h4>
+<ol>
+<li>First item</li>
+<li>Second item</li>
+<li>Third item</li>
+</ol>
+<h4 id="unordered-list">Unordered List</h4>
+<ul>
+<li>List item</li>
+<li>Another item</li>
+<li>And another item</li>
+</ul>
+<h4 id="nested-list">Nested list</h4>
+<ul>
+<li>Item</li>
+</ul>
+<ol>
+<li>First Sub-item</li>
+<li>Second Sub-item</li>
+</ol>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>The above quote is excerpted from Rob Pike&rsquo;s <a href="https://www.youtube.com/watch?v=PAAkCSZUG1c">talk</a> during Gopherfest, November 18, 2015. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
 
 
         </main>

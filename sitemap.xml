@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.org/blog/</loc>
+    <loc>http://example.org/posts/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url>
   
@@ -33,7 +33,7 @@
   </url>
   
   <url>
-    <loc>http://example.org/blog/post/</loc>
+    <loc>http://example.org/posts/post/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url>
   
@@ -62,11 +62,11 @@
   </url>
   
   <url>
-    <loc>http://example.org/downloads/</loc>
+    <loc>http://example.org/publications/hfes2020/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/project/testing/</loc>
+    <loc>http://example.org/project/passgen/</loc>
   </url>
   
   <url>
@@ -75,6 +75,22 @@
   
   <url>
     <loc>http://example.org/publications/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/publications/honorsthesis/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/publications/sahrta/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/publications/hfes2019/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/project/witchcraft/</loc>
   </url>
   
 </urlset>
