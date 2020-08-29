@@ -13,6 +13,11 @@
   </url>
   
   <url>
+    <loc>http://example.org/posts/sshengr/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://example.org/tags/css/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url>
@@ -63,6 +68,10 @@
   
   <url>
     <loc>http://example.org/publications/hfes2020/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/cs434example/</loc>
   </url>
   
   <url>

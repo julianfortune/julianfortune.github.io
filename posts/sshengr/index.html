@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta charset="utf-8" />
+
+<title>Connecting to the ENGR Filespace Using VSCode and SSH Keys on macOS/Linux - Julian Fortune</title>
+
+<meta name="description" content="This guide is only designed for MacOS and Linux users. View the Windows guide here.
+SSH Keys (Optional) Check for Existing Keys If you are pretty sure you haven&rsquo;t generated keys before, skip this step.
+Run this command in your terminal.
+ls -al ~/.ssh Look for files called id_rsa and id_rsa.pub.
+config id-rsa id-rsa.pub known_hosts If you see any existing keys, you can skip the next section, or delete them.">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+
+
+
+
+    
+    
+    
+    
+    <link rel="stylesheet" href="/style.min.css" media="screen">
+
+
+
+
+<script>
+    function toggleMenu() {
+        var x = document.getElementById("navigation");
+        if (x.className === "") {
+            x.className = "open";
+        } else {
+            x.className = "";
+        }
+    }
+</script><body>
+        <header><nav class="" id="navigation">
+    <div class="top-bar">
+        <a class="logo" href="/">
+            <h1>
+                Julian Fortune
+            </h1>
+        </a><ul>
+    
+    
+    
+    <li class="">
+        <a href="/about/" title="About">
+            About
+        </a>
+        <div class="underline"></div>
+    </li>
+    
+    
+    <li class=" active ">
+        <a href="/posts/" title="Blog">
+            Blog
+        </a>
+        <div class="underline"></div>
+    </li>
+    
+    
+    <li class="">
+        <a href="/project/" title="Projects">
+            Projects
+        </a>
+        <div class="underline"></div>
+    </li>
+    
+    
+    <li class="">
+        <a href="/publications/" title="Publications">
+            Publications
+        </a>
+        <div class="underline"></div>
+    </li>
+    
+</ul><div class="open-menu-button" title="Open Navigation Menu" onclick="toggleMenu()">
+            <div class="menu-button-container">
+                <div class="icon"></div>
+                <div class="icon"></div>
+                <div class="icon"></div>
+            </div>
+        </div>
+    </div>
+    <div class="dropdown-menu"><ul>
+    
+    
+    
+    <li class="">
+        <a href="/about/" title="About">
+            About
+        </a>
+        <div class="underline"></div>
+    </li>
+    
+    
+    <li class=" active ">
+        <a href="/posts/" title="Blog">
+            Blog
+        </a>
+        <div class="underline"></div>
+    </li>
+    
+    
+    <li class="">
+        <a href="/project/" title="Projects">
+            Projects
+        </a>
+        <div class="underline"></div>
+    </li>
+    
+    
+    <li class="">
+        <a href="/publications/" title="Publications">
+            Publications
+        </a>
+        <div class="underline"></div>
+    </li>
+    
+</ul></div>
+
+
+</nav></header>
+
+<main>
+    <article class="content">
+        <header>
+            <h1 class="title">
+                Connecting to the ENGR Filespace Using VSCode and SSH Keys on macOS/Linux
+            </h1>
+            <p class="date">
+                
+                    March 11, 2019
+                
+            </p>
+        </header>
+        <p>This guide is only designed for MacOS and Linux users. View the Windows guide <a href="https://gist.github.com/julianfortune/09b8f4eca768a970e45d99ca2e76fa69">here</a>.</p>
+<h2 id="ssh-keys">SSH Keys</h2>
+<h3 id="optional-check-for-existing-keys">(Optional) Check for Existing Keys</h3>
+<p>If you are pretty sure you haven&rsquo;t generated keys before, skip this step.</p>
+<p>Run this command in your terminal.</p>
+<pre><code>ls -al ~/.ssh
+</code></pre><p>Look for files called <code>id_rsa</code> and <code>id_rsa.pub</code>.</p>
+<pre><code>config
+id-rsa
+id-rsa.pub
+known_hosts
+</code></pre><p>If you see any existing keys, you can skip the next section, or delete them.</p>
+<h3 id="generating-a-new-ssh-key">Generating a new SSH key</h3>
+<ol>
+<li>
+<p>Open Terminal.</p>
+</li>
+<li>
+<p>Paste this command, replacing <code>onid</code> with your ONID username.</p>
+<pre><code>ssh-keygen -t rsa -b 4096 -C &quot;onid@oregonstate.edu&quot;
+</code></pre><p>This creates a new SSH key in the RSA format with a size of 4096 bytes, using the provided email as a label.</p>
+<pre><code>&gt; Generating public/private rsa key pair.
+</code></pre></li>
+<li>
+<p>At this prompt press Enter. (This accepts the default file location)</p>
+<pre><code>&gt; Enter a file in which to save the key (/Users/you/.ssh/id_rsa):
+</code></pre></li>
+<li>
+<p>Set a Password (or No Password).</p>
+<pre><code>&gt; Enter passphrase (empty for no passphrase):
+</code></pre><p>Type a secure password after the prompt, or <strong>for no password press enter</strong>.</p>
+<p>Can&rsquo;t decide? Here is an overview of the upsides/downsides of SSH passwords:</p>
+<blockquote>
+<p>It’s up to you whether you want to use a passphrase. Entering a passphrase does have its benefits: the security of a key, no matter how encrypted, still depends on the fact that it is not visible to anyone else. Should a passphrase-protected private key fall into an unauthorized users possession, they will be unable to log in to its associated accounts until they figure out the passphrase, buying the hacked user some extra time. The only downside, of course, to having a passphrase, is then having to type it in each time you use the key pair.</p>
+<ul>
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2">Digital Ocean</a></li>
+</ul>
+</blockquote>
+<p><em>TL;DR: If you password/fingerprint protect your laptop and have good computer safety practices you don&rsquo;t need a password.</em></p>
+<pre><code>&gt; Enter same passphrase again: [Type passphrase again]
+</code></pre><p>Enter the same password again.</p>
+</li>
+</ol>
+<h3 id="copy-the-new-ssh-key-to-the-server">Copy the New SSH Key to the Server</h3>
+<ol>
+<li>
+<p>Type in this command, replacing <code>onid</code> with your ONID username.</p>
+<pre><code>ssh-copy-id onid@access.engr.oregonstate.edu
+</code></pre></li>
+<li>
+<p>Type in your ONID password, and perform DUO authentication.</p>
+</li>
+<li>
+<p>Make sure the message says</p>
+<pre><code>Number of keys added   1
+</code></pre></li>
+</ol>
+<h3 id="extra-resources">Extra Resources</h3>
+<p>Instructions from Github <a href="https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">here</a>.</p>
+<p>Instructions from Digital Ocean <a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2">here</a>.
+<a href="https://www.simplified.guide/ssh/copy-public-key">Copy public key to server</a>.</p>
+<h2 id="ssh-config">SSH Config</h2>
+<h3 id="create-a-new-ssh-preset">Create a New SSH Preset</h3>
+<ol>
+<li>
+<p>Open the SSH config file on your machine (not on flip).</p>
+<pre><code>vim ~/.ssh/config
+</code></pre><p>You can use any editor of your choice. If you are on MacOS, navigate to your user directory, press <code>cmd+shift+.</code> to show hidden files, open <code>.ssh</code>, and double click <code>config</code>. If there is no <code>config</code> file, create one with <code>touch ~/.ssh/config</code>.</p>
+</li>
+<li>
+<p>Paste the following text into the file, replacing <code>onid</code> with your onid username.</p>
+<p><em>Note: You can choose any name you want to replace <code>engr</code>.</em></p>
+<pre><code>Host engr
+    HostName access.engr.oregonstate.edu
+    User onid
+
+Host *
+    AddKeysToAgent yes
+    UseKeychain yes
+    IdentityFile ~/.ssh/id_rsa
+</code></pre><p><em>Note: The second host entry, <code>*</code>, applies to all entries. This is specifically for MacOS, so that VSCode can easily read your SSH key.</em></p>
+</li>
+</ol>
+<h2 id="setting-up-vscode-to-connect-to-the-engr-server">Setting up VSCode to Connect to the ENGR Server</h2>
+<p>VSCode is a customizable text editor built using the Election framework, so it will run on any desktop operating system (Windows, MacOS, Linux, &hellip;).
+VSCode is completely free and open source, and allows for all sorts of customizations and themes.</p>
+<h3 id="install-vscode">Install VSCode</h3>
+<p>Download VSCode from the <a href="https://code.visualstudio.com/Download">Visual Studio website</a>.</p>
+<h4 id="macos">MacOS</h4>
+<ol>
+<li>
+<p>Drag VSCode into the <code>Applications</code> folder (<code>Finder &gt; Go &gt; Applications</code>).</p>
+</li>
+<li>
+<p>Right click on the VSCode application.</p>
+</li>
+<li>
+<p>Click <code>Open</code>.</p>
+</li>
+</ol>
+<h3 id="open-vscode">Open VSCode</h3>
+<p>Once you have VSCode installed and open you should see something like this:</p>
+<!-- raw HTML omitted -->
+<h3 id="install-the-remote---ssh-extension">Install the &lsquo;Remote - SSH&rsquo; Extension</h3>
+<p>Install the Remote Development Extension pack:</p>
+<ol>
+<li>Open this link to the <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh">Remote - SSH</a> and click the green Install button.</li>
+</ol>
+<p><em>OR</em></p>
+<ol>
+<li>
+<p>Click on the <code>Extensions</code> item (the tetris-y icon) in the activity bar (vertical menu on the far left).</p>
+</li>
+<li>
+<p>Search for &ldquo;remote ssh&rdquo; in the search bar.</p>
+</li>
+<li>
+<p>Select the extension called <code>Remote - SSH</code>, and click <code>Install</code>.</p>
+</li>
+</ol>
+<p>It will look something like this:</p>
+<!-- raw HTML omitted -->
+<h3 id="connect-to-the-server">Connect to the server</h3>
+<!-- raw HTML omitted -->
+<ol>
+<li>
+<p>Click on the <code>Remote hosts</code> button (turquoise with two &gt; &lt; symbols facing eachother) in the Status bar (bottom bar shown in purple). If you don&rsquo;t see anything, try right clicking on the Status bar and make sure <code>Remote Host</code> is selected.</p>
+<!-- raw HTML omitted -->
+</li>
+<li>
+<p>Select <code>Remote-SSH: Connect to Host...</code>.</p>
+</li>
+<li>
+<p>Select <code>engr</code> (or whatever name you chose in your SSH config) from the list. A new window will open.</p>
+<!-- raw HTML omitted -->
+</li>
+<li>
+<p>To see files, open the file browser (icon with two sheets of paper in the Activity bar on the left), and click <code>Open Folder</code>, then select a folder, and press <code>ok</code>.</p>
+<!-- raw HTML omitted -->
+</li>
+</ol>
+<p>You should now be able to browse files in the left area, edit in the main editor window, and run using shell commands in the bottom terminal pane.</p>
+<p>If a terminal doesn&rsquo;t open automatically, you can open one using <code>ctrl-shift-` </code>or in the top bar <code>Terminal &gt; New</code>.</p>
+
+    </article>
+</main>
+
+
+
+        <footer><center>
+    <p>
+        <span>&copy; 2020 <a href="http://example.org/">Julian Fortune</a></span>
+        <span>&middot;</span>
+        <span>Powered by <a class="hugo-link" href="https://gohugo.io">Hugo</a></span>
+        <span>&middot;</span>
+        <span><a class="hugo-link" href="???">RSS</a></span>
+    </p>
+</center></footer>
+    </body>
+</html>
