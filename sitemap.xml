@@ -3,6 +3,26 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://example.org/</loc>
+    <lastmod>2019-11-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/publications/</loc>
+    <lastmod>2019-11-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/publications/hfes2019/</loc>
+    <lastmod>2019-11-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/publications/sahrta/</loc>
+    <lastmod>2019-03-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://example.org/posts/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url>
@@ -24,11 +44,6 @@
   
   <url>
     <loc>http://example.org/tags/html/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://example.org/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url>
   
@@ -67,10 +82,6 @@
   </url>
   
   <url>
-    <loc>http://example.org/publications/hfes2020/</loc>
-  </url>
-  
-  <url>
     <loc>http://example.org/posts/cs434example/</loc>
   </url>
   
@@ -83,19 +94,11 @@
   </url>
   
   <url>
-    <loc>http://example.org/publications/</loc>
-  </url>
-  
-  <url>
     <loc>http://example.org/publications/honorsthesis/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/publications/sahrta/</loc>
-  </url>
-  
-  <url>
-    <loc>http://example.org/publications/hfes2019/</loc>
+    <loc>http://example.org/publications/hfes2020/</loc>
   </url>
   
   <url>
