@@ -6,10 +6,19 @@
     <description>Recent content on Julian Fortune</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 01 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Markdown Syntax Guide</title>
+      <link>http://example.org/posts/post/</link>
+      <pubDate>Wed, 11 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/posts/post/</guid>
+      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Speech Workload Estimation for Human-Machine Interaction</title>
@@ -22,12 +31,21 @@ Abstract Performing tasks quickly and accurately in dynamic and intense environm
     </item>
     
     <item>
+      <title>LaunchPad</title>
+      <link>http://example.org/project/launchpad/</link>
+      <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/project/launchpad/</guid>
+      <description>A macOS app for generating random, Sarafi-style passwords.</description>
+    </item>
+    
+    <item>
       <title>SAHRTA: A Supervisory-Based Adaptive Human-Robot Teaming Architecture</title>
       <link>http://example.org/publications/sahrta/</link>
       <pubDate>Tue, 12 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>http://example.org/publications/sahrta/</guid>
-      <description>authors: &amp;ldquo;Jamison Heard, Julian Fortune, Julie A. Adams&amp;rdquo;</description>
+      <description></description>
     </item>
     
     <item>
@@ -44,12 +62,12 @@ config id-rsa id-rsa.pub known_hosts If you see any existing keys, you can skip 
     </item>
     
     <item>
-      <title>Markdown Syntax Guide</title>
-      <link>http://example.org/posts/post/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      <title>Witchcraft</title>
+      <link>http://example.org/project/witchcraft/</link>
+      <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/posts/post/</guid>
-      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
+      <guid>http://example.org/project/witchcraft/</guid>
+      <description>A fully equipped software synthesizer built with Max/MSP. Includes 2 wavetable synthesizes which allow drawing waveforms directly on the interface. Both wavetables come with FM controllers. Also includes 2 basic oscillators, a physcial modeling oscillator, a harmonic oscillator and 2 noise sources. The generators and the filters are laid out to intuitively show the signal flow. At the bottom are the modulators and effects are along the side.</description>
     </item>
     
     <item>
@@ -97,15 +115,6 @@ Unsupervised clustering allows us to separate data points into a chosen number o
     </item>
     
     <item>
-      <title>PassGen</title>
-      <link>http://example.org/project/passgen/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://example.org/project/passgen/</guid>
-      <description>A macOS app for generating random, Sarafi-style passwords.</description>
-    </item>
-    
-    <item>
       <title>Real-time Speech Workload Estimation</title>
       <link>http://example.org/publications/honorsthesis/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -122,15 +131,6 @@ Unsupervised clustering allows us to separate data points into a chosen number o
       <guid>http://example.org/publications/hfes2020/</guid>
       <description>Authors Julian Fortune, Dr. Jamison Heard, &amp;amp; Dr. Julie A. Adams
 Abstract Demanding task environments (e.g., supervising a remotely piloted aircraft) require performing tasks quickly and accurately; however, periods of low and high operator workload can decrease task performance. Intelligent modulation of the system’s demands and interaction modality in response to changes in operator workload state may increase performance by avoiding undesirable workload states. This system requires real-time estimation of each workload component (i.</description>
-    </item>
-    
-    <item>
-      <title>Witchcraft</title>
-      <link>http://example.org/project/witchcraft/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://example.org/project/witchcraft/</guid>
-      <description>A fully equipped software synthesizer built with Max/MSP. Includes 2 wavetable synthesizes which allow drawing waveforms directly on the interface. Both wavetables come with FM controllers. Also includes 2 basic oscillators, a physcial modeling oscillator, a harmonic oscillator and 2 noise sources. The generators and the filters are laid out to intuitively show the signal flow. At the bottom are the modulators and effects are along the side.</description>
     </item>
     
   </channel>

@@ -6,10 +6,19 @@
     <description>Recent content in markdown on Julian Fortune</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://example.org/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Markdown Syntax Guide</title>
+      <link>http://example.org/posts/post/</link>
+      <pubDate>Wed, 11 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/posts/post/</guid>
+      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Connecting to the ENGR Filespace Using VSCode and SSH Keys on macOS/Linux</title>
@@ -22,15 +31,6 @@ SSH Keys (Optional) Check for Existing Keys If you are pretty sure you haven&amp
 Run this command in your terminal.
 ls -al ~/.ssh Look for files called id_rsa and id_rsa.pub.
 config id-rsa id-rsa.pub known_hosts If you see any existing keys, you can skip the next section, or delete them.</description>
-    </item>
-    
-    <item>
-      <title>Markdown Syntax Guide</title>
-      <link>http://example.org/posts/post/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://example.org/posts/post/</guid>
-      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
     </item>
     
   </channel>
