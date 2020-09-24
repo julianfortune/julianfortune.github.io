@@ -6,10 +6,30 @@
     <description>Recent content in Publications on Julian Fortune</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 01 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 26 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://example.org/publications/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Real-Time Speech Workload Estimation for Intelligent Human-Machine Systems</title>
+      <link>http://example.org/publications/hfes2020/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/publications/hfes2020/</guid>
+      <description>Julian Fortune, Dr. Jamison Heard, and Dr. Julie A. Adams Accepted to the Human Factors and Ergonomics Society Annual Meeting.
+The paper will be presented on October 9th, 2020.
+Abstract Demanding task environments (e.g., supervising a remotely piloted aircraft) require performing tasks quickly and accurately; however, periods of low and high operator workload can decrease task performance. Intelligent modulation of the system’s demands and interaction modality in response to changes in operator workload state may increase performance by avoiding undesirable workload states.</description>
+    </item>
+    
+    <item>
+      <title>Real-time Speech Workload Estimation</title>
+      <link>http://example.org/publications/honorsthesis/</link>
+      <pubDate>Tue, 26 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/publications/honorsthesis/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Speech Workload Estimation for Human-Machine Interaction</title>
@@ -17,8 +37,7 @@
       <pubDate>Fri, 01 Nov 2019 00:00:00 +0000</pubDate>
       
       <guid>http://example.org/publications/hfes2019/</guid>
-      <description>Authors Julian Fortune, Dr. Jamison Heard, &amp;amp; Dr. Julie A. Adams
-Abstract Performing tasks quickly and accurately in dynamic and intense environments is critical, such as supervising a remotely piloted aircraft; however, these environments contain periods of low and high workload, which can decrease task performance. A system capable of intelligently adapting its interaction modality based on the human’s workload state may mitigate these undesirable workload states: underload and overload. Such a system requires mechanisms to determine accurately the human’s overall workload state and each workload component state (i.</description>
+      <description>Julian Fortune, Dr. Jamison Heard, and Dr. Julie A. Adams Abstract Performing tasks quickly and accurately in dynamic and intense environments is critical, such as supervising a remotely piloted aircraft; however, these environments contain periods of low and high workload, which can decrease task performance. A system capable of intelligently adapting its interaction modality based on the human’s workload state may mitigate these undesirable workload states: underload and overload. Such a system requires mechanisms to determine accurately the human’s overall workload state and each workload component state (i.</description>
     </item>
     
     <item>
@@ -28,25 +47,6 @@ Abstract Performing tasks quickly and accurately in dynamic and intense environm
       
       <guid>http://example.org/publications/sahrta/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>Real-time Speech Workload Estimation</title>
-      <link>http://example.org/publications/honorsthesis/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://example.org/publications/honorsthesis/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Real-Time Speech Workload Estimation for Intelligent Human-Machine Systems</title>
-      <link>http://example.org/publications/hfes2020/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://example.org/publications/hfes2020/</guid>
-      <description>Authors Julian Fortune, Dr. Jamison Heard, &amp;amp; Dr. Julie A. Adams
-Abstract Demanding task environments (e.g., supervising a remotely piloted aircraft) require performing tasks quickly and accurately; however, periods of low and high operator workload can decrease task performance. Intelligent modulation of the system’s demands and interaction modality in response to changes in operator workload state may increase performance by avoiding undesirable workload states. This system requires real-time estimation of each workload component (i.</description>
     </item>
     
   </channel>
