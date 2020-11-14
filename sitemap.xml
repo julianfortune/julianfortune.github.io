@@ -3,50 +3,55 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.org/publications/hfes2020/</loc>
+    <loc>http://julianfortune.com/publications/hfes2020/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/</loc>
-    <lastmod>2020-05-26T00:00:00+00:00</lastmod>
+    <loc>http://julianfortune.com/</loc>
+    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/publications/</loc>
-    <lastmod>2020-05-26T00:00:00+00:00</lastmod>
+    <loc>http://julianfortune.com/projects/paperecg/</loc>
+    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/publications/honorsthesis/</loc>
-    <lastmod>2020-05-26T00:00:00+00:00</lastmod>
+    <loc>http://julianfortune.com/projects/</loc>
+    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/publications/hfes2019/</loc>
-    <lastmod>2019-11-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://example.org/publications/sahrta/</loc>
-    <lastmod>2019-03-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://example.org/projects/</loc>
+    <loc>http://julianfortune.com/projects/witchcraft/</loc>
     <lastmod>2018-03-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/projects/witchcraft/</loc>
-    <lastmod>2018-03-01T00:00:00+00:00</lastmod>
+    <loc>http://julianfortune.com/about/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/categories/</loc>
+    <loc>http://julianfortune.com/categories/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/tags/</loc>
+    <loc>http://julianfortune.com/publications/</loc>
+  </url>
+  
+  <url>
+    <loc>http://julianfortune.com/publications/honorsthesis/</loc>
+  </url>
+  
+  <url>
+    <loc>http://julianfortune.com/publications/sahrta/</loc>
+  </url>
+  
+  <url>
+    <loc>http://julianfortune.com/publications/hfes2019/</loc>
+  </url>
+  
+  <url>
+    <loc>http://julianfortune.com/tags/</loc>
   </url>
   
 </urlset>

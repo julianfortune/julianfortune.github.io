@@ -3,10 +3,35 @@
 
 <meta charset="utf-8" />
 
-<title>Markdown Syntax Guide - Julian Fortune</title>
+<title>About - Julian Fortune</title>
 
-<meta name="description" content="This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.">
-<meta name="author" content="Hugo Authors">
+<meta name="description" content="Education
+Testing out example.com.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Accumsan tortor posuere ac ut. Maecenas ultricies mi eget mauris pharetra et ultrices. Sagittis vitae et leo duis ut diam. Libero volutpat sed cras ornare arcu dui vivamus arcu felis. Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Magna sit amet purus gravida quis blandit turpis cursus in. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis. Risus feugiat in ante metus dictum. Sagittis vitae et leo duis. Ut consequat semper viverra nam libero. Elementum facilisis leo vel fringilla est ullamcorper. Habitant morbi tristique senectus et netus et malesuada fames. Condimentum vitae sapien pellentesque habitant morbi tristique senectus et. Ipsum nunc aliquet bibendum enim facilisis gravida neque. Maecenas accumsan lacus vel facilisis.
+def quickSort(a):
+    # Base case
+    if len(a) &lt;= 1:
+        return a
+
+    else:
+        less = []
+        more = []
+
+        pivot = choice(a)
+
+        name = &#34;Julian&#34;
+
+        for i in a:
+            if i &lt; pivot:
+                less.append(i)
+            if i &gt; pivot:
+                more.append(i)
+
+        less = quickSort(less)
+        more = quickSort(more)
+        return less &#43; [pivot] * a.count(pivot) &#43; more
+This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.">
+<meta name="author" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 
@@ -60,7 +85,7 @@
     
     
     <li class="">
-        <a href="/project/" title="Projects">
+        <a href="/projects/" title="Projects">
             Projects
         </a>
         <div class="underline"></div>
@@ -103,7 +128,7 @@
     
     
     <li class="">
-        <a href="/project/" title="Projects">
+        <a href="/projects/" title="Projects">
             Projects
         </a>
         <div class="underline"></div>
@@ -126,15 +151,38 @@
     <article class="content">
         <header>
             <h1 class="title">
-                Markdown Syntax Guide
+                About
             </h1>
             <p class="date">
                 
-                    March 11, 2020
-                
             </p>
         </header>
-        <p>This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.</p>
+        <h1 id="education">Education</h1>
+<p>Testing out <a href="https://example.com">example.com</a>.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Accumsan tortor posuere ac ut. Maecenas ultricies mi eget mauris pharetra et ultrices. Sagittis vitae et leo duis ut diam. Libero volutpat sed cras ornare arcu dui vivamus arcu felis. Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Magna sit amet purus gravida quis blandit turpis cursus in. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis. Risus feugiat in ante metus dictum. Sagittis vitae et leo duis. Ut consequat semper viverra nam libero. Elementum facilisis leo vel fringilla est ullamcorper. Habitant morbi tristique senectus et netus et malesuada fames. Condimentum vitae sapien pellentesque habitant morbi tristique senectus et. Ipsum nunc aliquet bibendum enim facilisis gravida neque. Maecenas accumsan lacus vel facilisis.</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">quickSort</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="c1"># Base case</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">a</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">less</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">more</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="n">pivot</span> <span class="o">=</span> <span class="n">choice</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+        <span class="n">name</span> <span class="o">=</span> <span class="s2">&#34;Julian&#34;</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">pivot</span><span class="p">:</span>
+                <span class="n">less</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="n">pivot</span><span class="p">:</span>
+                <span class="n">more</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+        <span class="n">less</span> <span class="o">=</span> <span class="n">quickSort</span><span class="p">(</span><span class="n">less</span><span class="p">)</span>
+        <span class="n">more</span> <span class="o">=</span> <span class="n">quickSort</span><span class="p">(</span><span class="n">more</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">less</span> <span class="o">+</span> <span class="p">[</span><span class="n">pivot</span><span class="p">]</span> <span class="o">*</span> <span class="n">a</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">pivot</span><span class="p">)</span> <span class="o">+</span> <span class="n">more</span>
+</code></pre></div><p>This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.</p>
 <h2 id="headings">Headings</h2>
 <p>The following HTML <code>&lt;h1&gt;</code>—<code>&lt;h6&gt;</code> elements represent six levels of section headings. <code>&lt;h1&gt;</code> is the highest section level while <code>&lt;h6&gt;</code> is the lowest.</p>
 <h1 id="h1">H1</h1>
@@ -145,6 +193,48 @@
 <h6 id="h6">H6</h6>
 <h2 id="paragraph">Paragraph</h2>
 <p>Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga. Ri oditatquam, ad quibus unda veliamenimin cusam et facea ipsamus es exerum sitate dolores editium rerore eost, temped molorro ratiae volorro te reribus dolorer sperchicium faceata tiustia prat.</p>
+<table>
+<thead>
+<tr>
+<th>Platform</th>
+<th>Shell</th>
+<th>Command to activate virtual environment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POSIX</td>
+<td>bash/zsh</td>
+<td><code>$ source .env/bin/activate</code></td>
+</tr>
+<tr>
+<td>&quot;</td>
+<td>fish</td>
+<td><code>$ source .env/bin/activate.fish</code></td>
+</tr>
+<tr>
+<td>&quot;</td>
+<td>csh/tcsh</td>
+<td><code>$ source .env/bin/activate.csh</code></td>
+</tr>
+<tr>
+<td>&quot;</td>
+<td>PowerShell Core</td>
+<td><code>$ .env/bin/Activate.ps1</code></td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>cmd.exe</td>
+<td><code>C:\&gt; .env\Scripts\activate.bat</code></td>
+</tr>
+<tr>
+<td>&quot;</td>
+<td>PowerShell</td>
+<td><code>PS C:\&gt; .env\Scripts\Activate.ps1</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="third-heading">Third Heading</h3>
 <p>Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sapicia is sinveli squiatum, core et que aut hariosam ex eat.</p>
 <h2 id="blockquotes">Blockquotes</h2>
 <p>The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a <code>footer</code> or <code>cite</code> element, and optionally with in-line changes such as annotations and abbreviations.</p>
@@ -159,7 +249,7 @@
 — <!-- raw HTML omitted -->Rob Pike<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup><!-- raw HTML omitted --></p>
 </blockquote>
 <h2 id="tables">Tables</h2>
-<p>Tables aren&rsquo;t part of the core Markdown spec, but Hugo supports supports them out-of-the-box.</p>
+<p>Tables aren&rsquo;t part of the core Markdown spec<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>, but Hugo supports supports them out-of-the-box.</p>
 <table>
 <thead>
 <tr>
@@ -199,30 +289,17 @@
 </table>
 <h2 id="code-blocks">Code Blocks</h2>
 <h4 id="code-block-with-backticks">Code block with backticks</h4>
-<pre><code>html
-&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-  &lt;meta charset=&quot;UTF-8&quot;&gt;
-  &lt;title&gt;Example HTML5 Document&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;p&gt;Test&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre><h4 id="code-block-indented-with-four-spaces">Code block indented with four spaces</h4>
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-  &lt;meta charset=&quot;UTF-8&quot;&gt;
-  &lt;title&gt;Example HTML5 Document&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;p&gt;Test&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-<h4 id="code-block-with-hugos-internal-highlight-shortcode">Code block with Hugo&rsquo;s internal highlight shortcode</h4>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Example HTML5 Document<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Test<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div><h4 id="code-block-with-hugos-internal-highlight-shortcode">Code block with Hugo&rsquo;s internal highlight shortcode</h4>
 <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
@@ -248,23 +325,21 @@
 </ul>
 <h4 id="nested-list">Nested list</h4>
 <ul>
-<li>Item</li>
-</ul>
+<li>Item
 <ol>
 <li>First Sub-item</li>
 <li>Second Sub-item</li>
 </ol>
-<h2 id="other-elements--abbr-sub-sup-kbd-mark">Other Elements — abbr, sub, sup, kbd, mark</h2>
-<p><!-- raw HTML omitted -->GIF<!-- raw HTML omitted --> is a bitmap image format.</p>
-<p>H<!-- raw HTML omitted -->2<!-- raw HTML omitted -->O</p>
-<p>X<!-- raw HTML omitted -->n<!-- raw HTML omitted --> + Y<!-- raw HTML omitted -->n<!-- raw HTML omitted --> = Z<!-- raw HTML omitted -->n<!-- raw HTML omitted --></p>
-<p>Press <!-- raw HTML omitted --><!-- raw HTML omitted -->CTRL<!-- raw HTML omitted -->+<!-- raw HTML omitted -->ALT<!-- raw HTML omitted -->+<!-- raw HTML omitted -->Delete<!-- raw HTML omitted --><!-- raw HTML omitted --> to end the session.</p>
-<p>Most <!-- raw HTML omitted -->salamanders<!-- raw HTML omitted --> are nocturnal, and hunt for insects, worms, and other small creatures.</p>
+</li>
+</ul>
 <section class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
 <li id="fn:1" role="doc-endnote">
 <p>The above quote is excerpted from Rob Pike&rsquo;s <a href="https://www.youtube.com/watch?v=PAAkCSZUG1c">talk</a> during Gopherfest, November 18, 2015. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>Markdown spec Wikipedia page. <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </section>
