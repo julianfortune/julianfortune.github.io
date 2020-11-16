@@ -32,6 +32,23 @@
             x.className = "";
         }
     }
+</script>
+
+
+<script src="https://unpkg.com/zooming/build/zooming.min.js"></script>
+
+<script>
+  
+  document.addEventListener('DOMContentLoaded', function () {
+    new Zooming({
+      
+    
+        scaleBase: 0.8,
+        enableGrab: false,
+        bgColor: "none",
+        
+    }).listen('.img-zoomable')
+  })
 </script><body>
         <header><nav class="" id="navigation">
     <div class="top-bar">
@@ -125,8 +142,6 @@
                         Paper ECG Digitization
                     </h1>
                     
-                    
-                    
                         <p class="description shaded">
                             Senior Capstone Project at OSU
                         </p>
@@ -151,8 +166,6 @@
                     <h1>
                         Witchcraft
                     </h1>
-                    
-                    
                     
                         <p class="description shaded">
                             Senior Capstone Project at OSU

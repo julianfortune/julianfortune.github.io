@@ -32,6 +32,23 @@
             x.className = "";
         }
     }
+</script>
+
+
+<script src="https://unpkg.com/zooming/build/zooming.min.js"></script>
+
+<script>
+  
+  document.addEventListener('DOMContentLoaded', function () {
+    new Zooming({
+      
+    
+        scaleBase: 0.8,
+        enableGrab: false,
+        bgColor: "none",
+        
+    }).listen('.img-zoomable')
+  })
 </script><body>
         <header><nav class="" id="navigation">
     <div class="top-bar">
@@ -106,12 +123,14 @@
 
 </nav></header>
 
+<div class="spacer-top"></div>
 <main class="splash-container">
     <div class="splash">
         <h1 class="center-splash-header">404</h1>
         <p>That page can't be found 🤷🏼‍♂️.</p>
     </div>
 </main>
+<div class="spacer-bottom"></div>
 
 
 

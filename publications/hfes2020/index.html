@@ -34,6 +34,23 @@ Abstract Demanding task environments (e.g., supervising a remotely piloted aircr
             x.className = "";
         }
     }
+</script>
+
+
+<script src="https://unpkg.com/zooming/build/zooming.min.js"></script>
+
+<script>
+  
+  document.addEventListener('DOMContentLoaded', function () {
+    new Zooming({
+      
+    
+        scaleBase: 0.8,
+        enableGrab: false,
+        bgColor: "none",
+        
+    }).listen('.img-zoomable')
+  })
 </script><body>
         <header><nav class="" id="navigation">
     <div class="top-bar">
@@ -114,9 +131,16 @@ Abstract Demanding task environments (e.g., supervising a remotely piloted aircr
             <h1 class="title">
                 Real-Time Speech Workload Estimation for Intelligent Human-Machine Systems
             </h1>
-            <p class="date">
+            
+                <p class="date">
+                    
+                        
+                            <span>November 14, 2020</span>
+                        
+                    
+
+                </p>
                 
-            </p>
         </header>
         <h3 id="julian-fortune-dr-jamison-heard-and-dr-julie-a-adams">Julian Fortune, Dr. Jamison Heard, and Dr. Julie A. Adams</h3>
 <p>Accepted to the Human Factors and Ergonomics Society Annual Meeting.</p>

@@ -5,8 +5,7 @@
     <link>http://julianfortune.com/projects/</link>
     <description>Recent content in Projects on Julian Fortune</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 01 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://julianfortune.com/projects/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="http://julianfortune.com/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Paper ECG Digitization</title>
       <link>http://julianfortune.com/projects/paperecg/</link>
@@ -23,7 +22,7 @@ Electrocardiography The heart generates electricity with every heartbeat, and by
       <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
       
       <guid>http://julianfortune.com/projects/witchcraft/</guid>
-      <description>A fully equipped software synthesizer built with Max/MSP. Includes 2 wavetable synthesizes which allow drawing waveforms directly on the interface. Both wavetables come with FM controllers. Also includes 2 basic oscillators, a physcial modeling oscillator, a harmonic oscillator and 2 noise sources. The generators and the filters are laid out to intuitively show the signal flow. At the bottom are the modulators and effects are along the side.</description>
+      <description>Witchcraft&amp;rsquo;s interface   A fully equipped software synthesizer built with Max/MSP. Includes 2 wavetable synthesizes which allow drawing waveforms directly on the interface. Both wavetables come with FM controllers. Also includes 2 basic oscillators, a physical modeling oscillator, a harmonic oscillator and 2 noise sources. The generators and the filters are laid out to intuitively show the signal flow. At the bottom are the modulators and effects are along the side.</description>
     </item>
     
   </channel>
