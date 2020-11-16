@@ -17,11 +17,14 @@
 
     
     
-    
     <link rel="stylesheet" href="/style.min.css" media="screen">
 
 
 
+
+
+
+<script src="/js/zooming.js"></script>
 
 <script>
     function toggleMenu() {
@@ -32,23 +35,16 @@
             x.className = "";
         }
     }
-</script>
 
-
-<script src="https://unpkg.com/zooming/build/zooming.min.js"></script>
-
-<script>
-  
-  document.addEventListener('DOMContentLoaded', function () {
-    new Zooming({
-      
     
-        scaleBase: 0.8,
-        enableGrab: false,
-        bgColor: "none",
-        
-    }).listen('.img-zoomable')
-  })
+    document.addEventListener('DOMContentLoaded', function () {
+        new Zooming({
+            
+            scaleBase: 0.8,
+            enableGrab: false,
+            bgColor: "none",
+        }).listen('.img-zoomable')
+    })
 </script><body>
         <header><nav class="" id="navigation">
     <div class="top-bar">
@@ -185,7 +181,7 @@
             
                 <p class="link">
                     
-                        <a href="https://ir.library.oregonstate.edu/concern/honors_college_theses/2v23w1844" title="Real-time Speech Workload Estimation full text">Full text</a>
+                        <a href="https://ir.library.oregonstate.edu/downloads/m613n447j" title="Real-time Speech Workload Estimation full text">Full text</a>
                     
                     
                         <a href="/documents/ThesisPoster.pdf" title="Real-time Speech Workload Estimation poster">Poster</a>

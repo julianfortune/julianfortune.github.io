@@ -18,11 +18,14 @@ Abstract Demanding task environments (e.g., supervising a remotely piloted aircr
 
     
     
-    
     <link rel="stylesheet" href="/style.min.css" media="screen">
 
 
 
+
+
+
+<script src="/js/zooming.js"></script>
 
 <script>
     function toggleMenu() {
@@ -33,23 +36,16 @@ Abstract Demanding task environments (e.g., supervising a remotely piloted aircr
             x.className = "";
         }
     }
-</script>
 
-
-<script src="https://unpkg.com/zooming/build/zooming.min.js"></script>
-
-<script>
-  
-  document.addEventListener('DOMContentLoaded', function () {
-    new Zooming({
-      
     
-        scaleBase: 0.8,
-        enableGrab: false,
-        bgColor: "none",
-        
-    }).listen('.img-zoomable')
-  })
+    document.addEventListener('DOMContentLoaded', function () {
+        new Zooming({
+            
+            scaleBase: 0.8,
+            enableGrab: false,
+            bgColor: "none",
+        }).listen('.img-zoomable')
+    })
 </script><body>
         <header><nav class="" id="navigation">
     <div class="top-bar">
@@ -134,7 +130,7 @@ Abstract Demanding task environments (e.g., supervising a remotely piloted aircr
                 <p class="date">
                     
                         
-                            <span>November 14, 2020</span>
+                            <span>November 16, 2020</span>
                         
                     
 
