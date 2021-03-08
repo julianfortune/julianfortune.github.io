@@ -2,35 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on Julian Fortune</title>
-    <link>http://julianfortune.com/projects/</link>
+    <link>https://julianfortune.com/projects/</link>
     <description>Recent content in Projects on Julian Fortune</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://julianfortune.com/projects/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://julianfortune.com/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Paper ECG Digitization</title>
-      <link>http://julianfortune.com/projects/paperecg/</link>
+      <link>https://julianfortune.com/projects/paperecg/</link>
       <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://julianfortune.com/projects/paperecg/</guid>
+      <guid>https://julianfortune.com/projects/paperecg/</guid>
       <description>Background Stakeholders Dr. Larisa Tereschenko is a researcher at OHSU who relies on Electrocardiogram (ECG) data for her work. A digitizer that is convenient to use in the lab will enable her to leverage large stores of paper ECG data and advance her research on heart disease. Furthermore, the free availability of this tool will enable the entire field of cardiovascular researchers to digitally analyze these paper-only data sets.
 Electrocardiography The heart generates electricity with every heartbeat, and by using electrodes we can measure the differences in electrical potentials.</description>
     </item>
     
     <item>
       <title>Unjumble</title>
-      <link>http://julianfortune.com/projects/unjumble/</link>
+      <link>https://julianfortune.com/projects/unjumble/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://julianfortune.com/projects/unjumble/</guid>
+      <guid>https://julianfortune.com/projects/unjumble/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Witchcraft</title>
-      <link>http://julianfortune.com/projects/witchcraft/</link>
+      <link>https://julianfortune.com/projects/witchcraft/</link>
       <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://julianfortune.com/projects/witchcraft/</guid>
+      <guid>https://julianfortune.com/projects/witchcraft/</guid>
       <description>Witchcraft&amp;rsquo;s interface   A fully equipped software synthesizer built with Max/MSP. Includes 2 wavetable synthesizes which allow drawing waveforms directly on the interface. Both wavetables come with FM controllers. Also includes 2 basic oscillators, a physical modeling oscillator, a harmonic oscillator and 2 noise sources. The generators and the filters are laid out to intuitively show the signal flow. At the bottom are the modulators and effects are along the side.</description>
     </item>
     

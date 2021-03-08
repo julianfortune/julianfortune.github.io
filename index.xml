@@ -2,83 +2,83 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Julian Fortune</title>
-    <link>http://julianfortune.com/</link>
+    <link>https://julianfortune.com/</link>
     <description>Recent content on Julian Fortune</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://julianfortune.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://julianfortune.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Real-Time Speech Workload Estimation for Intelligent Human-Machine Systems</title>
-      <link>http://julianfortune.com/publications/hfes2020/</link>
+      <link>https://julianfortune.com/publications/hfes2020/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://julianfortune.com/publications/hfes2020/</guid>
+      <guid>https://julianfortune.com/publications/hfes2020/</guid>
       <description>Julian Fortune, Dr. Jamison Heard, and Dr. Julie A. Adams Accepted to the Human Factors and Ergonomics Society Annual Meeting.
 Abstract Demanding task environments (e.g., supervising a remotely piloted aircraft) require performing tasks quickly and accurately; however, periods of low and high operator workload can decrease task performance. Intelligent modulation of the system’s demands and interaction modality in response to changes in operator workload state may increase performance by avoiding undesirable workload states.</description>
     </item>
     
     <item>
       <title>Paper ECG Digitization</title>
-      <link>http://julianfortune.com/projects/paperecg/</link>
+      <link>https://julianfortune.com/projects/paperecg/</link>
       <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://julianfortune.com/projects/paperecg/</guid>
+      <guid>https://julianfortune.com/projects/paperecg/</guid>
       <description>Background Stakeholders Dr. Larisa Tereschenko is a researcher at OHSU who relies on Electrocardiogram (ECG) data for her work. A digitizer that is convenient to use in the lab will enable her to leverage large stores of paper ECG data and advance her research on heart disease. Furthermore, the free availability of this tool will enable the entire field of cardiovascular researchers to digitally analyze these paper-only data sets.
 Electrocardiography The heart generates electricity with every heartbeat, and by using electrodes we can measure the differences in electrical potentials.</description>
     </item>
     
     <item>
       <title>Unjumble</title>
-      <link>http://julianfortune.com/projects/unjumble/</link>
+      <link>https://julianfortune.com/projects/unjumble/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://julianfortune.com/projects/unjumble/</guid>
+      <guid>https://julianfortune.com/projects/unjumble/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Witchcraft</title>
-      <link>http://julianfortune.com/projects/witchcraft/</link>
+      <link>https://julianfortune.com/projects/witchcraft/</link>
       <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://julianfortune.com/projects/witchcraft/</guid>
+      <guid>https://julianfortune.com/projects/witchcraft/</guid>
       <description>Witchcraft&amp;rsquo;s interface   A fully equipped software synthesizer built with Max/MSP. Includes 2 wavetable synthesizes which allow drawing waveforms directly on the interface. Both wavetables come with FM controllers. Also includes 2 basic oscillators, a physical modeling oscillator, a harmonic oscillator and 2 noise sources. The generators and the filters are laid out to intuitively show the signal flow. At the bottom are the modulators and effects are along the side.</description>
     </item>
     
     <item>
       <title>About</title>
-      <link>http://julianfortune.com/about/</link>
+      <link>https://julianfortune.com/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://julianfortune.com/about/</guid>
+      <guid>https://julianfortune.com/about/</guid>
       <description>Education I am currently completing my final year at Oregon State University. My major is Computer Science, and I am specializing in artificial intelligence and machine learning.
 Experience I built front-end features utilized by all LucidChart customers with Typescript and Angular, and expanded back-end models in Scala during my internship at Lucid Software during the Summer of 2020. From June 2018 to June 2019 I interned at CBT Nuggets, working on the iOS, tvOS, and UWP platforms.</description>
     </item>
     
     <item>
       <title>Real-time Speech Workload Estimation</title>
-      <link>http://julianfortune.com/publications/honorsthesis/</link>
+      <link>https://julianfortune.com/publications/honorsthesis/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://julianfortune.com/publications/honorsthesis/</guid>
+      <guid>https://julianfortune.com/publications/honorsthesis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>SAHRTA: A Supervisory-Based Adaptive Human-Robot Teaming Architecture</title>
-      <link>http://julianfortune.com/publications/sahrta/</link>
+      <link>https://julianfortune.com/publications/sahrta/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://julianfortune.com/publications/sahrta/</guid>
+      <guid>https://julianfortune.com/publications/sahrta/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Speech Workload Estimation for Human-Machine Interaction</title>
-      <link>http://julianfortune.com/publications/hfes2019/</link>
+      <link>https://julianfortune.com/publications/hfes2019/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://julianfortune.com/publications/hfes2019/</guid>
+      <guid>https://julianfortune.com/publications/hfes2019/</guid>
       <description>Julian Fortune, Dr. Jamison Heard, and Dr. Julie A. Adams Abstract Performing tasks quickly and accurately in dynamic and intense environments is critical, such as supervising a remotely piloted aircraft; however, these environments contain periods of low and high workload, which can decrease task performance. A system capable of intelligently adapting its interaction modality based on the human’s workload state may mitigate these undesirable workload states: underload and overload. Such a system requires mechanisms to determine accurately the human’s overall workload state and each workload component state (i.</description>
     </item>
     
