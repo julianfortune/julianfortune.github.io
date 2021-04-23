@@ -12,7 +12,8 @@
       <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://julianfortune.com/projects/paperecg/</guid>
-      <description>The Paper ECG interface   This application provides tools for cardiology professionals to digitize digital scans or images of ECG print outs, and is the first free and open source application to provide such functionality. Users can annotate regions of the image to extra signal data and specify the scale information to create an accurate digitization of the signals. The digitization processes are implementations of peer-reviewed ECG signal digitization algorithms.</description>
+      <description>View the source code on GitHub
+  The Paper ECG application&amp;rsquo;s interface   This application provides tools for cardiology professionals to digitize digital scans or images of ECG print outs, and is the first free and open source application to provide such functionality. Users can annotate regions of the image to extract the signal data therein and specify the scale information to create an accurate digitization of the signals.</description>
     </item>
     
     <item>
