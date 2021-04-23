@@ -13,7 +13,7 @@
       
       <guid>https://julianfortune.com/projects/paperecg/</guid>
       <description>View the source code on GitHub
-  The Paper ECG application&amp;rsquo;s interface   This application provides tools for cardiology professionals to digitize digital scans or images of ECG print outs, and is the first free and open source application to provide such functionality. Users can annotate regions of the image to extract the signal data therein and specify the scale information to create an accurate digitization of the signals.</description>
+  The Paper ECG application&amp;rsquo;s interface   The Paper ECG application enables cardiology professionals to convert digital scans or images of ECG print outs to digital signal data, and is the first free and open source application to provide such functionality. Users annotate the image with rectangular regions to mark where each signal is located and specify the scale information and the application handles the rest of the process to create accurate accurate digital signals.</description>
     </item>
     
     <item>
