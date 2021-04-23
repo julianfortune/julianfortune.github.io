@@ -7,13 +7,12 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://julianfortune.com/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Paper ECG Digitization</title>
+      <title>Paper ECG</title>
       <link>https://julianfortune.com/projects/paperecg/</link>
       <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://julianfortune.com/projects/paperecg/</guid>
-      <description>Background Stakeholders Dr. Larisa Tereschenko is a researcher at OHSU who relies on Electrocardiogram (ECG) data for her work. A digitizer that is convenient to use in the lab will enable her to leverage large stores of paper ECG data and advance her research on heart disease. Furthermore, the free availability of this tool will enable the entire field of cardiovascular researchers to digitally analyze these paper-only data sets.
-Electrocardiography The heart generates electricity with every heartbeat, and by using electrodes we can measure the differences in electrical potentials.</description>
+      <description>The Paper ECG interface   This application provides tools for cardiology professionals to digitize digital scans or images of ECG print outs, and is the first free and open source application to provide such functionality. Users can annotate regions of the image to extra signal data and specify the scale information to create an accurate digitization of the signals. The digitization processes are implementations of peer-reviewed ECG signal digitization algorithms.</description>
     </item>
     
     <item>
