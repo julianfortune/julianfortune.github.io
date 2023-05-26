@@ -17,123 +17,26 @@
 
 
 
-    
-    
-    <link rel="stylesheet" href="/style.min.css" media="screen">
 
 
+<link rel="stylesheet" href="/style.min.css" media="screen">
 
-
-
-
-<script src="/js/zooming.js"></script>
-
-<script>
-    function toggleMenu() {
-        var x = document.getElementById("navigation");
-        if (x.className === "") {
-            x.className = "open";
-        } else {
-            x.className = "";
-        }
-    }
-
-    
-    document.addEventListener('DOMContentLoaded', function () {
-        new Zooming({
-            
-            scaleBase: 0.8,
-            enableGrab: false,
-            bgColor: "none",
-        }).listen('.img-zoomable')
-    })
-</script><body>
-        <header><nav class="" id="navigation">
-    <div class="top-bar">
-        <a class="logo" href="/">
-            <h1>
-                Julian Fortune
-            </h1>
-        </a><ul>
-    
-    
-    
-    <li class="">
-        <a href="/about/" title="About">
-            About
-        </a>
-        <div class="underline"></div>
-    </li>
-    
-    
-    <li class="">
-        <a href="/projects/" title="Projects">
-            Projects
-        </a>
-        <div class="underline"></div>
-    </li>
-    
-    
-    <li class="">
-        <a href="/publications/" title="Publications">
-            Publications
-        </a>
-        <div class="underline"></div>
-    </li>
-    
-</ul><div class="open-menu-button" title="Open Navigation Menu" onclick="toggleMenu()">
-            <div class="menu-button-container">
-                <div class="icon"></div>
-                <div class="icon"></div>
-                <div class="icon"></div>
-            </div>
-        </div>
-    </div>
-    <div class="dropdown-menu"><ul>
-    
-    
-    
-    <li class="">
-        <a href="/about/" title="About">
-            About
-        </a>
-        <div class="underline"></div>
-    </li>
-    
-    
-    <li class="">
-        <a href="/projects/" title="Projects">
-            Projects
-        </a>
-        <div class="underline"></div>
-    </li>
-    
-    
-    <li class="">
-        <a href="/publications/" title="Publications">
-            Publications
-        </a>
-        <div class="underline"></div>
-    </li>
-    
-</ul></div>
-
-
-</nav></header>
+<body>
 
 <div class="spacer-top"></div>
 <main class="splash-container">
-    <div class="splash personal-card">
-        <img src="profile.png"/>
-        <h1>Hi, I'm Julian Fortune.</h1>
-        <p>I'm a fourth year Computer Science Major at Oregon State University seeking a role in software engineering or machine learning.</p>
+    <div class="splash personal-card active">
+        <img src="profile.png" />
+        <h1>Hi, I'm Julian.</h1>
+        <p>I'm a Backend software engineer with extensive experience in Python and a love for functional programming.</p>
         <ul>
             <li>
-                <a class="block-link" href="https://www.linkedin.com/in/julianfortune"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 18" height="28">
+                <a class="block-link" href="https://www.linkedin.com/in/julianfortune"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" height="28">
     <path
         d="M3.94 2A2 2 0 1 1 2 0a2 2 0 0 1 1.94 2zM4 5.48H0V18h4zm6.32 0H6.34V18h3.94v-6.57c0-3.66 4.77-4 4.77 0V18H19v-7.93c0-6.17-7.06-5.94-8.72-2.91z"
         fill="currentColor"></path>
-</svg></a>
+</svg>
+</a>
             </li>
             <li>
                 <a class="block-link" href="https://github.com/julianfortune"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" height="28">
@@ -147,7 +50,7 @@
                 <a href="/resume.pdf">
                     Resum&eacute;
                 </a>
-            </ul>
+        </ul>
         </ul>
     </div>
 </main>
@@ -157,7 +60,7 @@
 
         <footer><center>
     <p>
-        <span>&copy; 2021
+        <span>&copy; 2023
             
         </span>
         <span>&middot;</span>

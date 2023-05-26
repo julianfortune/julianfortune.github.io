@@ -1,68 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-  <url>
-    <loc>https://julianfortune.com/publications/hfes2020/</loc>
-    <lastmod>2020-11-16T11:54:20-08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://julianfortune.com/</loc>
-    <lastmod>2021-04-23T14:14:04-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://julianfortune.com/projects/paperecg/</loc>
-    <lastmod>2021-04-23T14:14:04-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://julianfortune.com/projects/unjumble/</loc>
-    <lastmod>2020-11-16T15:06:35-08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://julianfortune.com/projects/witchcraft/</loc>
-    <lastmod>2021-04-23T13:46:39-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://julianfortune.com/about/</loc>
-    <lastmod>2020-11-15T20:02:37-08:00</lastmod>
-  </url>
-  
   <url>
     <loc>https://julianfortune.com/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>https://julianfortune.com/projects/</loc>
-    <lastmod>2020-11-14T01:21:47-08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://julianfortune.com/publications/</loc>
-    <lastmod>2020-11-14T01:21:47-08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://julianfortune.com/publications/honorsthesis/</loc>
-    <lastmod>2020-11-16T15:06:35-08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://julianfortune.com/publications/sahrta/</loc>
-    <lastmod>2020-11-16T11:54:20-08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://julianfortune.com/publications/hfes2019/</loc>
-    <lastmod>2020-11-18T12:02:12-08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://julianfortune.com/</loc>
+  </url><url>
     <loc>https://julianfortune.com/tags/</loc>
   </url>
-  
 </urlset>
