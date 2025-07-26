@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <link rel="preload" href="/%20lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2"
+    crossorigin="anonymous">
+  <link rel="preload" href="/%20lib/font-awesome/webfonts/fa-regular-400.woff2" as="font"
+    type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/%20lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2"
+    crossorigin="anonymous">
+  <link rel="preload" href="/%20lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font"
+    type="font/woff2" crossorigin="anonymous">
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> Nested Parameterization in Junit (5.13&#43;) | Julian Fortune</title>
+  <link rel='canonical' href='//localhost:1313/posts/junit-parameterized-classes/'>
+  
+  <meta name="description" content="I&#39;m a software engineer with a passion for functional programming. I&#39;ve previously worked at Disney Streaming, LucidChart, and a handful of small start-ups. Check out my resume [here](https://julianfortune.com/resume/resume.pdf)">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta property="og:url" content="//localhost:1313/posts/junit-parameterized-classes/">
+  <meta property="og:site_name" content="Julian Fortune">
+  <meta property="og:title" content="Nested Parameterization in Junit (5.13&#43;)">
+  <meta property="og:description" content="Junit Parameterization For my day job I write a lot of Junit tests in Kotlin, and up until the recent release of Junit 5.13 it had some rough edges with parameterization: (1) parameterizing multiple methods in a test suite required redundant boilerplate, and (2) achieving cartesian products of parameters was cumbersome and inflexible.
+For instance, if we needed to test a greet() function that takes a language and person’s name:">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-07-20T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-07-20T00:00:00+00:00">
+    <meta property="article:tag" content="Kotlin">
+    <meta property="article:tag" content="Jvm">
+    <meta property="article:tag" content="Testing">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Nested Parameterization in Junit (5.13&#43;)">
+  <meta name="twitter:description" content="Junit Parameterization For my day job I write a lot of Junit tests in Kotlin, and up until the recent release of Junit 5.13 it had some rough edges with parameterization: (1) parameterizing multiple methods in a test suite required redundant boilerplate, and (2) achieving cartesian products of parameters was cumbersome and inflexible.
+For instance, if we needed to test a greet() function that takes a language and person’s name:">
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="//localhost:1313/css/styles.a81e44cd84ae7d4a9bbaa7f1a9d44247fe1914f3cead344ae9fba73a019f0c8cfb0c9849fcad56042d3ef16616191ba547e1a04319789b5552ca06b689604543.css" integrity="sha512-qB5EzYSufUqbuqfxqdRCR/4ZFPPOrTRK6funOgGfDIz7DJhJ/K1WBC0&#43;8WYWGRulR&#43;GgQxl4m1VSyga2iWBFQw==">
+
+  
+  
+  
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+  <div class="content index py4">
+
+  <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+        <li><a href="/">Home</a></li>
+         
+        <li><a href="/posts">Posts</a></li>
+         
+        <li><a href="/tags">Tags</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li>
+          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#" aria-label="Share">
+            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=%2f%2flocalhost%3a1313%2fposts%2fjunit-parameterized-classes%2f" aria-label="Facebook">
+      <i class="fab fa-facebook " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=%2f%2flocalhost%3a1313%2fposts%2fjunit-parameterized-classes%2f&text=Nested%20Parameterization%20in%20Junit%20%285.13%2b%29" aria-label="Twitter">
+      <i class="fab fa-twitter " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=%2f%2flocalhost%3a1313%2fposts%2fjunit-parameterized-classes%2f&title=Nested%20Parameterization%20in%20Junit%20%285.13%2b%29" aria-label="Linkedin">
+      <i class="fab fa-linkedin " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=%2f%2flocalhost%3a1313%2fposts%2fjunit-parameterized-classes%2f&is_video=false&description=Nested%20Parameterization%20in%20Junit%20%285.13%2b%29" aria-label="Pinterest">
+      <i class="fab fa-pinterest " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Nested%20Parameterization%20in%20Junit%20%285.13%2b%29&body=Check out this article: %2f%2flocalhost%3a1313%2fposts%2fjunit-parameterized-classes%2f" aria-label="Email">
+      <i class="fas fa-envelope " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=%2f%2flocalhost%3a1313%2fposts%2fjunit-parameterized-classes%2f&title=Nested%20Parameterization%20in%20Junit%20%285.13%2b%29" aria-label="Pocket">
+      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=%2f%2flocalhost%3a1313%2fposts%2fjunit-parameterized-classes%2f&title=Nested%20Parameterization%20in%20Junit%20%285.13%2b%29" aria-label="reddit">
+      <i class="fab fa-reddit " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=%2f%2flocalhost%3a1313%2fposts%2fjunit-parameterized-classes%2f&name=Nested%20Parameterization%20in%20Junit%20%285.13%2b%29&description=%3ch2%20id%3d%22junit-parameterization%22%3eJunit%20Parameterization%3c%2fh2%3e%0a%3cp%3eFor%20my%20day%20job%20I%20write%20a%20lot%20of%20Junit%20tests%20in%20Kotlin%2c%20and%20up%20until%20the%20recent%20release%20of%20Junit%20%3ccode%3e5.13%3c%2fcode%3e%20it%20had%20some%20rough%20edges%20with%20parameterization%3a%20%281%29%20parameterizing%20multiple%20methods%20in%20a%20test%20suite%20required%20redundant%20boilerplate%2c%20and%20%282%29%20achieving%20cartesian%20products%20of%20parameters%20was%20cumbersome%20and%20inflexible.%3c%2fp%3e%0a%3cp%3eFor%20instance%2c%20if%20we%20needed%20to%20test%20a%20%3ccode%3egreet%28%29%3c%2fcode%3e%20function%20that%20takes%20a%20%3ccode%3elanguage%3c%2fcode%3e%20and%20person%26rsquo%3bs%20%3ccode%3ename%3c%2fcode%3e%3a%3c%2fp%3e" aria-label="Tumblr">
+      <i class="fab fa-tumblr " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=%2f%2flocalhost%3a1313%2fposts%2fjunit-parameterized-classes%2f&t=Nested%20Parameterization%20in%20Junit%20%285.13%2b%29" aria-label="Hacker News">
+      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+    
+    <div id="toc">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#junit-parameterization">Junit Parameterization</a></li>
+    <li><a href="#parameterizedclass-annotation"><code>ParameterizedClass</code> Annotation</a></li>
+    <li><a href="#parameterizing-suites">Parameterizing Suites</a></li>
+    <li><a href="#nested-cartesian-product-parameterization">Nested (Cartesian Product) Parameterization\</a></li>
+  </ul>
+</nav>
+    </div>
+    
+  </span>
+</div>
+
+
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <h1 class="posttitle" itemprop="name headline">
+        Nested Parameterization in Junit (5.13&#43;)
+      </h1>
+      <div class="meta">
+        
+        <div class="postdate">
+          
+          <time datetime="2025-07-20 00:00:00 &#43;0000 UTC" itemprop="datePublished">2025-07-20</time>
+          
+        </div>
+        
+        
+        
+        
+        <div class="article-tag">
+            <i class="fas fa-tag"></i>
+            
+            
+            <a class="tag-link" href="/tags/kotlin" rel="tag">kotlin</a>
+            
+             ,  
+            <a class="tag-link" href="/tags/jvm" rel="tag">jvm</a>
+            
+             ,  
+            <a class="tag-link" href="/tags/testing" rel="tag">testing</a>
+            
+        </div>
+        
+      </div>
+    </header>
+
+  
+    
+    <div class="content" itemprop="articleBody">
+      <h2 id="junit-parameterization">Junit Parameterization</h2>
+<p>For my day job I write a lot of Junit tests in Kotlin, and up until the recent release of Junit <code>5.13</code> it had some rough edges with parameterization: (1) parameterizing multiple methods in a test suite required redundant boilerplate, and (2) achieving cartesian products of parameters was cumbersome and inflexible.</p>
+<p>For instance, if we needed to test a <code>greet()</code> function that takes a <code>language</code> and person&rsquo;s <code>name</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#d6cbb4;background-color:#252b2e;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6b655a">1</span><span><span style="color:#e67e80">fun</span> <span style="color:#b2c98f">greet</span>(language: Language, name: String): String
+</span></span></code></pre></div><p>and a very similar <code>bidFarewell()</code> function:</p>
+<div class="highlight"><pre tabindex="0" style="color:#d6cbb4;background-color:#252b2e;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6b655a">1</span><span><span style="color:#e67e80">fun</span> <span style="color:#b2c98f">bidFarewell</span>(language: Language, name: String): String
+</span></span></code></pre></div><p>in order to thoroughly test these methods we would end up writing something like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#d6cbb4;background-color:#252b2e;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6b655a"> 1</span><span><span style="color:#e67e80">class</span> ConversationTests {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6b655a"> 2</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6b655a"> 3</span><span>  @ParameterizedTest
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6b655a"> 4</span><span>  @CsvSource(<span style="color:#e67e80">value</span> = [
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6b655a"> 5</span><span>    <span style="color:#b2c98f">&#34;English | Harry | Hello, Harry&#34;</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6b655a"> 6</span><span>    <span style="color:#b2c98f">&#34;Shakespearean | Harry | Hello, Harry&#34;</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6b655a"> 7</span><span>    <span style="color:#b2c98f">&#34;PirateSpeak | Harry | Hello, Harry&#34;</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6b655a"> 8</span><span>  ])
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6b655a"> 9</span><span>  <span style="color:#e67e80">fun</span> <span style="color:#b2c98f">greet</span>(language: Language, name: String, expected: String) {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6b655a">10</span><span>    <span style="color:#e67e80">val</span> result = greet(language, name)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6b655a">11</span><span>    assertThat(result).isEqualTo(expected)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6b655a">12</span><span>  }
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6b655a">13</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6b655a">14</span><span>  @ParameterizedTest
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6b655a">15</span><span>  @CsvSource()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6b655a">16</span><span>  <span style="color:#e67e80">fun</span> <span style="color:#b2c98f">bidFarewell</span>(language: Language, name: String, expected: String) {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6b655a">17</span><span>    <span style="color:#e67e80">val</span> result = bidFarewell(language, name)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6b655a">18</span><span>    assertThat(result).isEqualTo(expected)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6b655a">19</span><span>  }
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6b655a">20</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6b655a">21</span><span>}
+</span></span></code></pre></div><p>Language.English
+Language.Shakespearean
+Language.PirateSpeak</p>
+<p>So I&rsquo;m realizing this feature is ideal when you have multiple different dependencies / strategies you want to subject a class to while exercising the various methods..</p>
+<p>I probably should find an example that fits really nicely with this use-case</p>
+<p>(maybe password service and hashing ..?)</p>
+<p>Could do browsers</p>
+<h2 id="parameterizedclass-annotation"><code>ParameterizedClass</code> Annotation</h2>
+<p>The new annotation introduced, <code>@ParameterizedClass</code>, can be applied to classes (and nested classes).</p>
+<p>&hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#d6cbb4;background-color:#252b2e;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6b655a"> 1</span><span>@ParameterizedClass
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6b655a"> 2</span><span>@CsvSource(<span style="color:#e67e80">value</span> = [<span style="color:#b2c98f">&#34;1&#34;</span>, <span style="color:#b2c98f">&#34;2&#34;</span>, <span style="color:#b2c98f">&#34;3&#34;</span>])
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6b655a"> 3</span><span><span style="color:#e67e80">class</span> FooBarTests {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6b655a"> 4</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6b655a"> 5</span><span>  @Parameter
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6b655a"> 6</span><span>  <span style="color:#e67e80">lateinit</span> <span style="color:#e67e80">var</span> parameter: Int
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6b655a"> 7</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6b655a"> 8</span><span>  @Test
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6b655a"> 9</span><span>  <span style="color:#e67e80">fun</span> <span style="color:#b2c98f">something</span>() {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6b655a">10</span><span>    <span style="color:#859289;font-style:italic">// ...
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6b655a">11</span><span><span style="color:#859289;font-style:italic"></span>  }
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6b655a">12</span><span>}
+</span></span></code></pre></div><h2 id="parameterizing-suites">Parameterizing Suites</h2>
+<h2 id="nested-cartesian-product-parameterization">Nested (Cartesian Product) Parameterization\</h2>
+
+    </div>
+  </article>
+
+  
+  
+
+
+
+
+
+
+  <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/posts">Posts</a></li>
+         
+          <li><a href="/tags">Tags</a></li>
+        
+      </ul>
+    </div>
+
+    
+    <div id="toc-footer" style="display: none">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#junit-parameterization">Junit Parameterization</a></li>
+    <li><a href="#parameterizedclass-annotation"><code>ParameterizedClass</code> Annotation</a></li>
+    <li><a href="#parameterizing-suites">Parameterizing Suites</a></li>
+    <li><a href="#nested-cartesian-product-parameterization">Nested (Cartesian Product) Parameterization\</a></li>
+  </ul>
+</nav>
+    </div>
+    
+
+    <div id="share-footer" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=%2f%2flocalhost%3a1313%2fposts%2fjunit-parameterized-classes%2f" aria-label="Facebook">
+      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=%2f%2flocalhost%3a1313%2fposts%2fjunit-parameterized-classes%2f&text=Nested%20Parameterization%20in%20Junit%20%285.13%2b%29" aria-label="Twitter">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=%2f%2flocalhost%3a1313%2fposts%2fjunit-parameterized-classes%2f&title=Nested%20Parameterization%20in%20Junit%20%285.13%2b%29" aria-label="Linkedin">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=%2f%2flocalhost%3a1313%2fposts%2fjunit-parameterized-classes%2f&is_video=false&description=Nested%20Parameterization%20in%20Junit%20%285.13%2b%29" aria-label="Pinterest">
+      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Nested%20Parameterization%20in%20Junit%20%285.13%2b%29&body=Check out this article: %2f%2flocalhost%3a1313%2fposts%2fjunit-parameterized-classes%2f" aria-label="Email">
+      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=%2f%2flocalhost%3a1313%2fposts%2fjunit-parameterized-classes%2f&title=Nested%20Parameterization%20in%20Junit%20%285.13%2b%29" aria-label="Pocket">
+      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=%2f%2flocalhost%3a1313%2fposts%2fjunit-parameterized-classes%2f&title=Nested%20Parameterization%20in%20Junit%20%285.13%2b%29" aria-label="reddit">
+      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=%2f%2flocalhost%3a1313%2fposts%2fjunit-parameterized-classes%2f&name=Nested%20Parameterization%20in%20Junit%20%285.13%2b%29&description=%3ch2%20id%3d%22junit-parameterization%22%3eJunit%20Parameterization%3c%2fh2%3e%0a%3cp%3eFor%20my%20day%20job%20I%20write%20a%20lot%20of%20Junit%20tests%20in%20Kotlin%2c%20and%20up%20until%20the%20recent%20release%20of%20Junit%20%3ccode%3e5.13%3c%2fcode%3e%20it%20had%20some%20rough%20edges%20with%20parameterization%3a%20%281%29%20parameterizing%20multiple%20methods%20in%20a%20test%20suite%20required%20redundant%20boilerplate%2c%20and%20%282%29%20achieving%20cartesian%20products%20of%20parameters%20was%20cumbersome%20and%20inflexible.%3c%2fp%3e%0a%3cp%3eFor%20instance%2c%20if%20we%20needed%20to%20test%20a%20%3ccode%3egreet%28%29%3c%2fcode%3e%20function%20that%20takes%20a%20%3ccode%3elanguage%3c%2fcode%3e%20and%20person%26rsquo%3bs%20%3ccode%3ename%3c%2fcode%3e%3a%3c%2fp%3e" aria-label="Tumblr">
+      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=%2f%2flocalhost%3a1313%2fposts%2fjunit-parameterized-classes%2f&t=Nested%20Parameterization%20in%20Junit%20%285.13%2b%29" aria-label="Hacker News">
+      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      
+        <a id="menu-toggle" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;" aria-label="Menu">
+          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+        <a id="toc-toggle" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;" aria-label="TOC">
+          <i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        
+        <a id="share-toggle" class="icon" href="#" onclick="$('#share-footer').toggle();return false;" aria-label="Share">
+          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+
+  <footer id="footer">
+  <div class="footer-left">
+    Copyright  &copy; 2025  Julian Fortune 
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+        <li><a href="/">Home</a></li>
+         
+        <li><a href="/posts">Posts</a></li>
+         
+        <li><a href="/tags">Tags</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+  </div>
+</body>
+
+<link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
+<script src=/lib/jquery/jquery.min.js></script>
+<script src=/js/main.js></script>
+
+<script src=/js/code-copy.js></script>
+
+
+
+
+</html>

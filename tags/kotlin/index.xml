@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kotlin on Julian Fortune</title>
+    <link>//localhost:1313/tags/kotlin/</link>
+    <description>Recent content in Kotlin on Julian Fortune</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 20 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/kotlin/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nested Parameterization in Junit (5.13&#43;)</title>
+      <link>//localhost:1313/posts/junit-parameterized-classes/</link>
+      <pubDate>Sun, 20 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/junit-parameterized-classes/</guid>
+      <description>&lt;h2 id=&#34;junit-parameterization&#34;&gt;Junit Parameterization&lt;/h2&gt;&#xA;&lt;p&gt;For my day job I write a lot of Junit tests in Kotlin, and up until the recent release of Junit &lt;code&gt;5.13&lt;/code&gt; it had some rough edges with parameterization: (1) parameterizing multiple methods in a test suite required redundant boilerplate, and (2) achieving cartesian products of parameters was particularly awkward.&lt;/p&gt;&#xA;&lt;p&gt;For instance, if we needed to test a &lt;code&gt;greet()&lt;/code&gt; function that takes a &lt;code&gt;locale&lt;/code&gt; and person&amp;rsquo;s &lt;code&gt;name&lt;/code&gt;:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#d6cbb4;background-color:#252b2e;-moz-tab-size:2;-o-tab-size:2;tab-size:2;&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6b655a&#34;&gt;1&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#e67e80&#34;&gt;fun&lt;/span&gt; &lt;span style=&#34;color:#b2c98f&#34;&gt;greet&lt;/span&gt;(locale: Locale, name: String): String&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;and a very similar &lt;code&gt;bidFarewell()&lt;/code&gt; function:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
